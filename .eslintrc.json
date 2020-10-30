@@ -1,8 +1,18 @@
 {
   "env": {
-    "es2021": true
+    "es2021": true,
+    "jest/globals": true
   },
-  "extends": ["airbnb-base", "prettier", "plugin:react/recommended", "prettier/react"],
+  "extends": [
+    "airbnb-base",
+    "prettier",
+
+    "plugin:react/recommended",
+    "prettier/react",
+
+    "plugin:jest/recommended",
+    "plugin:jest/style"
+  ],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
@@ -11,11 +21,25 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["prettier", "import-helpers", "react","react-hooks"],
+  "plugins": [
+    "prettier",
+    "import-helpers",
+
+    "react","react-hooks",
+
+    "jest"
+  ],
   "rules": {
     "react/static-property-placement":"off",
     "react/jsx-filename-extension": ["warn", {"extensions": [".jsx", ".js"] } ],
     "react/state-in-constructor":"off",
+
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+
     "no-console": ["error",{"allow": ["tron"]}],
     "react/jsx-props-no-spreading": "off",
     "react-hooks/rules-of-hooks": "error",
@@ -71,6 +95,9 @@
     ]
   },
   "settings": {
+    "jest": {
+      "version": 26
+    },
     "import/resolver": {
       "babel-plugin-root-import": [
         {
