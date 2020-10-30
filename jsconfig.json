@@ -19,7 +19,7 @@
       "#pages/*": ["./src/views/pages/*"],
       "#partials/*": ["./src/views/partials/*"],
       "#components/*": ["./src/views/components/*"],
-      "#behaviors/*": ["./src/views/behaviors/*"],
+      "#behaviors/*": ["./src/views/behaviors/*"]
     }
   }
 }

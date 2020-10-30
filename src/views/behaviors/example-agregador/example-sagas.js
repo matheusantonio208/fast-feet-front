@@ -1,9 +1,9 @@
 import { toast } from 'react-toastify';
 import { select, put, all, takeLatest } from 'redux-saga/effects';
 
-import history from '#lib/history-lib';
+import history from '#lib/history-lib.js';
 
-import { action } from './example-actions';
+import { action } from './example-actions.js';
 
 function* middlewareAction({ id }) {
   try {

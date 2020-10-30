@@ -1,10 +1,11 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import createSagaMiddleware from 'redux-saga';
 import { persistStore } from 'redux-persist';
-import rootReducer from '#behavior/root-reducer.js ';
-import persistReducers from '#config/persist-reducer-config';
+import createSagaMiddleware from 'redux-saga';
 
-import rootSaga from '#behavior/root-sagas';
+import persistReducers from '#config/persist-config.js';
+
+import rootReducer from '#behaviors/root-reducer.js';
+import rootSaga from '#behaviors/root-sagas.js';
 
 const { NODE_ENV } = process.env;
 

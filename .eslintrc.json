@@ -11,7 +11,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["prettier", "import-helpers", "react"],
+  "plugins": ["prettier", "import-helpers", "react","react-hooks"],
   "rules": {
     "react/static-property-placement":"off",
     "react/jsx-filename-extension": ["warn", {"extensions": [".jsx", ".js"] } ],
@@ -19,7 +19,6 @@
     "no-console": ["error",{"allow": ["tron"]}],
     "react/jsx-props-no-spreading": "off",
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-dps": "warn",
 
     "prettier/prettier": [
       "error",
@@ -27,7 +26,7 @@
         "endOfLine": "auto"
       }
     ],
-    "import/extensions": ["error", "always"],
+    "import/extensions": ["error", "ignorePackages"],
     "class-methods-use-this": "off",
     "no-param-reassign": "off",
     "camelcase": "off",
@@ -55,6 +54,13 @@
           "/^#views/",
           "/^#models/",
           "/^#schemas/",
+          "/^#styles/",
+          "/^#assets/",
+          "/^#layouts/",
+          "/^#pages/",
+          "/^#partials/",
+          "/^#components/",
+          "/^#behaviors/",
           ["parent", "sibling", "index"]
         ],
         "alphabetize": {

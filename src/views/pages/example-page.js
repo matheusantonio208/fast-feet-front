@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Container } from '#styles/example-style'
 
+import { Container } from '#styles/example-style.js';
 
-import { actionRequest } from '#behavior/example-agregador/example-actions';
+import { actionRequest } from '#behaviors/example-agregador/example-actions.js';
 
 export default function ExamplePage() {
   const [stateExample, setStateFunction] = useState([
@@ -23,11 +23,11 @@ export default function ExamplePage() {
     setStateFunction([...stateExample, 'New Value 1']);
 
     // Fires an action in Redux
-    dispatch(actionRequest(data));
+    dispatch(actionRequest(stateAnotherComponent));
   }, [stateExample]);
 
   // Perform action once when the component is rendered
-  userEffect(() => {
+  useEffect(() => {
     const storageExample = localStorage.getItem('example');
 
     if (storageExample) {
