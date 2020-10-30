@@ -15,7 +15,7 @@ import Header from '#components/globals/Header.js';
 
 import Routes from '#behaviors/routes-front.js';
 
-function App() {
+export default function App() {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
@@ -29,5 +29,3 @@ function App() {
     </Provider>
   );
 }
-
-export default App;
