@@ -7,7 +7,10 @@ module.exports = {
     filename: 'bundle.js',
   },
   devServer: {
+    inline: true,
     contentBase: path.resolve(__dirname, 'public'),
+    port: 8080,
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -16,7 +19,7 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-        },
+        }
       },
       {
         test: /\.css$/,

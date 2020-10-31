@@ -1,12 +1,6 @@
-export function actionRequest(data) {
+export function actionName() {
   return {
-    type: '@example/ACTION_REQUEST',
-    data,
-  };
-}
-export function action(data) {
-  return {
-    type: '@example/ACTION_SUCCESS',
+    type: '@entity/ACTION_NAME',
     data,
   };
 }

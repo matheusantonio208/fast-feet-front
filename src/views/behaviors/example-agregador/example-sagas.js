@@ -5,10 +5,10 @@ import history from '#lib/history-lib.js';
 
 import { action } from './example-actions.js';
 
-function* middlewareAction({ id }) {
+export function* entitySagas({params}) {
   try {
     const dataExistsInState = yield select((state) =>
-      state.data.find((p) => p.id === id),
+      state.data.find((field) => field.params=== params),
     );
 
     const data = {
@@ -22,4 +22,4 @@ function* middlewareAction({ id }) {
   }
 }
 
-export default all([takeLatest('@example/ACTION_REQUEST', middlewareAction)]);
+export default all([takeLatest('@entity/ACTION_NAME', entitySagas)]);
