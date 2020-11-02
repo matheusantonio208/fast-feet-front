@@ -1,3 +1,10 @@
 {
-  "files.exclude": {}
+  "files.exclude": {
+    "infrastructure-layer": true,
+    "modules-layer": true,
+    "work-env": true,
+    "README.md": true,
+    ".vscode": true,
+    "platform-layer/platform-mobile-react-native": true
+  }
 }

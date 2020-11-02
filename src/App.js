@@ -9,9 +9,9 @@ import history from '#lib/history-lib.js';
 
 import { store, persistor } from '#config/redux-config.js';
 
-import GlobalStyle from '#styles/global-style.js';
-
 import Routes from '#views/routes-front.js';
+
+import GlobalStyle from '#pages/global-style.js';
 
 function App() {
   return (

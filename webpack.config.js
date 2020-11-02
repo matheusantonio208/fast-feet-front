@@ -1,3 +1,4 @@
+const Dotenv = require('dotenv-webpack');
 const path = require('path');
 
 module.exports = {
@@ -12,6 +13,7 @@ module.exports = {
     port: 8080,
     historyApiFallback: true,
   },
+  plugins: [new Dotenv()],
   module: {
     rules: [
       {
@@ -19,7 +21,7 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-        }
+        },
       },
       {
         test: /\.css$/,

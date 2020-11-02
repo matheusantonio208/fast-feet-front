@@ -1,9 +1,9 @@
 import Mongoose from 'mongoose';
 import request from 'supertest';
 
-import server from '#config/server/app';
-
 import factory from '#utils/factories';
+
+import server from '#config/server/app';
 
 describe('teste template', () => {
   beforeEach(async () => {
